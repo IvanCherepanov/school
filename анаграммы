@@ -1,0 +1,31 @@
+print("\t\t\tДобро пожаловать в игру")
+print("В нашей программе зашифрованы слово, которое Вам необходимо отгадать")
+print("Вам достается слово:")
+from random import*
+"""words = ("армада", "роскомнадзор",\
+         "сильмариллион", "геймдизайнер", "ржавый",
+         "семнадцать")"""
+words = ("желание","ржавый","семнадцать","рассвет", "печь",\
+         "девять", "добросердечный", "возвращениенародину",\
+         "один", "товарныйвагон")
+choice_word = choice(words)
+correct_answer = choice_word
+
+
+def mix(string):
+    new_string=" "
+    while string:
+        index = randrange(len(string))
+        new_string += string[index]
+        string  = string[:index]+string[index+1:]
+    return new_string
+
+print(mix(choice_word))
+print("Что это за слово?")
+
+answer = input("->")
+
+while answer != correct_answer:
+    print("Ошибка, попробуйте снова")
+    answer = input("->")
+print("Жду приказаний!")
