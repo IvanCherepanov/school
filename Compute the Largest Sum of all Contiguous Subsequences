@@ -1,0 +1,19 @@
+def largest_sum(arr):
+    if arr:
+        len_arr = len(arr)
+        k = 0
+        summa = 0
+        for i in arr:
+            if i < 0:
+                k+=1
+        if k == len_arr:
+            return 0
+        number_of_combo = len(arr)+1
+        for i in range(number_of_combo):
+        A.append(''.join(strarr[i:i+k]))
+        return max(A, key=len)
+
+    else:
+        return 0
+    
+print(largest_sum([1,2,3,4]))
