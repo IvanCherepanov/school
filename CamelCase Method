@@ -1,0 +1,31 @@
+def camel_case(string):
+    if string =='':
+        return ""
+    A = [i for i in string]
+    #print(A)
+    for i, j in  enumerate(A):
+        #print(i, j)
+        if i ==0:
+            A[i] = (A[i].upper())
+
+        elif j == " " and A[i+1] != " ":
+            #print(A[i+1].upper())
+            A[i+1] = (A[i+1].upper())
+        
+        #print(i)
+    ans = ""
+    
+    for i in A:
+        ans+=i
+    B = ans.split()
+    ans = ""
+    for i in B:
+        ans+=i
+
+    return ans
+    
+
+print(camel_case("say hello "))
+
+# i = index
+# j =value
